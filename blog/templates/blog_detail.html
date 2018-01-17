@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="col-sm-6">
+				<h3 class="blog-title">{{blog.title}}</h3>
+			</div>
+			{% if request.user.is_authenticated %}
+				<div class="col-sm-6 text-right blog-action">
+					<a href="{% url "blog_edit" blog.id %}"> Edit</a> 
+					<a href="{% url "blog_delete"  blog.id%}"> Delete</a> 
+				</div>
+			{% endif %}
+		</div>
+		<div class="col-sm-12 blog-body">
+			{{blog.body}}
+		</div>
+	</div>
+	</div>
+{% endblock %}

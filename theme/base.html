@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Blog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Css  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/css/style.css">
+
+	<!-- Javascripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/static/js/custom.js"></script>
+</head>
+<body>
+
+{% block navbar %}
+<nav class="navbar navbar-default blog-test">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="{% url "main" %}">MyBlog</a>
+		</div>
+		<ul class="nav navbar-nav">
+		  <li class="active"><a href="{% url "home" %}">Home</a></li>
+		  <li><a href="{% url "about" %}">About Us</a></li>
+		  <li><a href="{% url "contact" %}">Contact Us</a></li>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right">
+
+			{% if not request.user.is_authenticated %}
+
+			  	<li><a href="{% url "register" %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+
+			  	<li><a href="{% url "login" %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+			 {% else %}
+
+			 	<li> <a href="{% url "profile" request.user.id %}">Welcom , <strong>{{request.user}}</strong></a></li>
+
+			 	<li><a href="{% url "change_password" %}"><span class="glyphicon glyphicon-log-in"></span> Change Password</a></li>
+
+			 	<li><a href="{% url "logout" %}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+
+			 {% endif %}
+
+		</ul>
+
+	</div>
+</nav>
+{% endblock %}
+
+{% block messages %}
+	{% for message in messages %}
+		<div class="container-fluid {{message.tags}}">
+			{{message}}
+			
+		</div>
+	{% endfor %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+	<div class="footer">
+		Copyright @ Myblog, 2017
+	</div>
+{% endblock %}
+
+</body>
+</html>

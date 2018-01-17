@@ -1,0 +1,81 @@
+
+.blog-test {
+	height: 100px;
+	padding-top: 25px;
+	border-bottom: 2px solid lightgrey;
+}
+.footer {
+	height: 150px;
+	background-color: #f2f2f2;
+	text-align: center;
+	padding-top: 50px;
+	border-top: 2px solid lightgrey;
+	border-bottom: 2px solid lightgrey;
+}
+.blog-panel .panel-heading {
+	font-size: 18px;
+	color: grey;
+	font-weight: bold;
+}
+.blog-panel .panel-body {
+	height: 100px !important;
+}
+
+.errorlist {
+	color: red !important;
+}
+
+
+.success {
+	background-color: #A4DDF3;
+	height: 50px;
+	margin-bottom: 10px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.error {
+	background-color: red;
+	height: 50px;
+	margin-bottom: 10px;
+	padding-top: 20px;
+	text-align: center;
+	color: white;
+}
+
+.profile-email {
+	color: grey;
+}
+.info-section {
+	border-bottom: 1px solid lightgrey;
+}
+.profile-section {
+	margin-top: 20px;
+}
+.blog-section {
+	border-top: 2px dotted #CCC;
+}
+.blog-section .title {
+	border-bottom: 1px solid lightgrey;
+}
+.blog-section .blog {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid lightgrey;
+}
+.blog-title {
+	border-bottom: 2px solid grey;
+	padding-bottom: 20px;
+}
+.blog-body {
+	min-height: 200px;
+    background-color: #e5e5e5;
+    padding: 20px;
+    border: 1px solid grey;
+    margin-bottom: 20px
+}
+
+.home-def {
+	font-size: 15px !important;
+	color: #c71818;
+}

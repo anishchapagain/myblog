@@ -1,0 +1,13 @@
+.blog-test {
+	height: 100px;
+	padding-top: 25px;
+	border-bottom: 2px solid lightgrey;
+}
+.footer {
+	height: 150px;
+	background-color: #f2f2f2;
+	text-align: center;
+	padding-top: 50px;
+	border-top: 2px solid lightgrey;
+	border-bottom: 2px solid lightgrey;
+}

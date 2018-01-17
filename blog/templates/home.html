@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container" style="min-height: 400px">
+		<div class="row">
+			<div class="col-sm-12 text-right">
+				<a href="{% url "blog_add" %}">Add blog</a>
+			</div>
+		</div>
+		<div class="row">
+			{% for blog in blogs %}
+				<div class="col-sm-4 blog-panel">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="{% url "blog_detail" blog.id %}">
+								{{blog.title}}
+							</a>
+						</div>
+					 	 <div class="panel-body">{{blog.body}}</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
+
+
+
+	{% for blog in blogs %}
+		<h3>{{blog.title}}</h3>
+	{% endfor %} -->
